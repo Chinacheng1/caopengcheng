@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!-- 通过这个配置文件完成mybatis与数据库的连接 -->
+<configuration>
+	<!-- 引入数据源配置 database.properties 文件 -->
+	<!-- <properties resource="database.properties"></properties> -->
+	<!--配置mybatis 运行中的一些行为 -->
+	<settings>
+		<!-- 设置Mybatis的log实现为LOG4J -->
+		<setting name="logImpl" value="LOG4J"/>
+		<setting name="autoMappingBehavior" value="FULL"/>
+	</settings>
+	<typeAliases>
+		<!-- 
+		<typeAlias alias="User" type="entity.User"/>
+		 -->
+		 <package name="cn.appsys.pojo"/> 
+	</typeAliases>
+	<!-- <environments default="dev">
+		<environment id="dev">
+			采用jdbc事务管理
+			<transactionManager type="JDBC"></transactionManager>
+			采用Mybatis自带的数据源 POOLED
+			<dataSource type="POOLED">
+				<property name="driver" value="${driver}"/>
+				<property name="url" value="${url}"/>
+				<property name="username" value="${user}"/>
+				<property name="password" value="${password}"/>
+			</dataSource>
+		</environment>
+	</environments>            
+	<mappers>
+		<mapper resource="cn/smbms/dao/user/UserMapper.xml"/> 
+		<mapper resource="cn/smbms/dao/bill/BillDao.xml"/> 
+		<mapper resource="cn/smbms/dao/provider/ProviderMapper.xml"/>
+		<mapper resource="cn/smbms/dao/role/RoleMapper.xml"/>
+	</mappers> -->
+</configuration>
